@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
     nivel.operadores.push_back("+");
     nivel.operadores.push_back("-");
     this->jerarquiaOperadores.push_back(nivel);
-    //Podria usar algo asi pa saber si es unario o binario pero creo k no vale la pena
+    //Podria usar algo asi pa saber si es unario o binario pero creo k no vale la pena //
     //cantArgs.insert("*",2);
     //cantArgs.insert("/",2);
     //cantArgs.insert("+",2);
