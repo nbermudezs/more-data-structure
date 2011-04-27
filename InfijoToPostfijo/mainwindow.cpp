@@ -63,7 +63,7 @@ void MainWindow::on_pushButton_clicked()
             meterOperador(")");
             continue;
         }
-        if(currentToken.at(0).isDigit())
+        if(currentToken.at(0).isDigit() || currentToken.at(0)=='/.')
             flag=DIGIT;
         //if(variables.contains(currentToken.at(0)))//Esta validacion no funcionara
           //  flag=VAR;
@@ -73,7 +73,7 @@ void MainWindow::on_pushButton_clicked()
         for(;;)//Algo k aprendi :) esto es un equivalente a while(true)
         {
             if(infijo.length()==0)break;
-            if(flag==DIGIT && infijo.at(0).isDigit()){//Tokeniza numeros
+            if(flag==DIGIT && infijo.at(0).isDigit() || infijo.at(0)=='/.'){//Tokeniza numeros
                 currentToken.append(infijo.at(0));
                 infijo.remove(0,1);
             }else if(flag==VAR)break;//xk solo soportaran 1 letra (el primer at(0))
